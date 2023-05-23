@@ -1,0 +1,145 @@
+<!-- ECF - Evaluation Graduate Développeur Web et Web Mobile
+     Réalisation par : Voahiranirina Myriam RAJERIARISOA
+     Date : Mai 2023
+     Projet : création du site internet du restaurant Quai Antique 
+     Page formulaire
+-->
+<!DOCTYPE>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+    <title>formulaire</title>
+  </head>
+  <body>
+    <header>
+      <div class="home-quai-antique">
+        <img 
+        src="./css/img/restau-logo.png" alt="restaurant quai antique logo" class="logo-restau-home" 
+        />
+        <span class="restau-home"  id="home">Bienvenue</span>
+      </div>
+
+      <nav class="nav" rôle="navigation">
+        <div class="nav-item" ><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></div>
+        <div class="nav-item" ><a class="lien-menu" href="./carte-des-plats.html" alt="menu et plat">Menu</a></div>
+        <div class="nav-item" ><a class="lien-contact" href="#contact">Contact</a></div>
+        <div class="nav-item" ><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></div>
+      </nav>
+    </header>
+
+    <aside class="galerie">
+      <ul class="list-menu-galerie">
+        <li class="list-menu-galerie-item">
+          <img src="./css/img/plat-gourmet.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
+        </li>
+      </ul>
+    </aside>
+  <main class="main-formulaire">
+    <div class="titre-main">
+      <h1 class="h1-formulaire">Formulaire client</h1>
+      <p>Merci de remplir de remlir ce formulaire pour recevoir notre newsletter des nouveautés</p>
+      <p>Pour vous remercier de cette confiance : un apréitif maison, divin, vous sera offert pour toute première reservation via notre espace client</p>
+    </div>
+    <form method="POST" action="action.php">
+
+      <label for="name">Nom<br>
+        <input type="text" name="name" id="name" placeholder="Votre nom" checked required>
+      </label>
+
+      <label for="email">email<br>
+        <input type="email" name="email" id="email" placeholder="email@email" checked required>
+        </label>
+    
+      <label for="name">Mot de passe<br>
+        <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
+      </label>
+      
+    
+      <label for="birthDate">Date de naissance<br>
+        <input type="date" name="birthDate" id="birthDate" placeholder="Votre date de naissance" checked required>
+      </label>
+    
+        <label for="comment">Message<br>
+        <textarea rows="4" name="comment" id="comment" placeholder="Saisissez votre commentaire"></textarea>
+        </label>
+    
+
+    
+    
+    <hr>
+    <p>Votre civilité :</p>
+    <div>
+      <label for="opt1">
+        <input type="radio" id="opt1" name="option-radio" value="opt1" checked>
+        Mme</label>
+    </div>
+    <div>
+      <label for="opt2">
+        <input type="radio" id="opt2" name="option-radio" value="opt2">
+        Mr
+      </label>
+    </div>
+    <hr>
+    <label for="reponse-selector">Pour mieux vous connaître : Selectionnez votre menu préféré
+      <select name="reponse-selector" id="reponse-selector">
+        <option value="rep1">Cueilleur</HTML></option>
+        <option value="rep2">Gargantuesque</option>
+        <option value="rep3">Moderne</option>
+    </select>
+    </label>
+    <hr>
+    <p>Cochez la case pour valider le formulaire :</p>
+    <div>
+    <label for="rep1">
+      <input type="checkbox" id="rep1" name="rep1" required>
+      J'accepte les conditions générales
+    </label>
+    </div>
+    
+    <div>
+      <!-- <button class="send-button" id="submit" type="submit">Créer votre compte client</button> -->
+      <input type="reset" value="Créer votre compte client"  class="bouton-formulaire" required>
+    </div>
+    <div>
+      <!-- <button class="send-button" id="submit" type="submit">Vider le formulaire</button> -->
+      <input type="reset" value="Tout effacer" class="bouton-formulaire">
+    </div>
+    </form>
+  </main>
+
+<!-- Pied de page -->
+<footer class="footer">
+  <p class="restau-footer" id="contact">Quai Antique<br>56 rue des Gourmets<br>00007 Bienvenue-Chez-Nous</p>
+
+  <p class="menu-footer">
+    <ul class="list-menu-footer">
+      <li><a class="lien-home" href="#home">Home</a></li>
+      <li><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></li>
+      <li><a class="lien-menu" href="./carte-des-plats.html" alt="menu et plat">Menu</a></li>
+      <li><a class="lien-contact" href="#contact">Contact</a></li>
+      <li><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></li>
+    </ul>
+    <ul class="list-horaires-footer">
+      <li class="titre-horaires-footer" >HORAIRE</li>
+      <li class="jour-horaires-footer" ><b>Lundi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+      <li class="jour-horaires-footer" ><b>Mardi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+      <li class="jour-horaires-footer" ><b>Mercredi:<i>Fermé le midi</i> - </b>19h30 à 21h00</li>
+      <li class="jour-horaires-footer" ><b>Jeudi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+      <li class="jour-horaires-footer" ><b>Vendredi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+      <li class="jour-horaires-footer" ><b>Mercredi:<i>Fermé le samedi et le dimanche</i></b></li>
+    </ul>
+  </p>
+
+  <p>
+    <ul class="list-social-footer">
+      <li><img src="./css/img/f-logo.PNG"/></li>
+      <li><img src="./css./img/t-logo.PNG"></li>
+      <li><img src="./css./img/i-logo.PNG"></li>
+    </ul>
+  </p>
+  <p class="date-footer">@2023</p>
+</footer>
+</body>
+</html>

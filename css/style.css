@@ -6,11 +6,12 @@
      ==> Lot 1 : site internet Front End statique
      ==> Lot 2 : site internet Front End dynamique
      ==> Lot 3: site internet avec les parties Front End  et Back end opérationnelles
-     Livraison : (date + description)
+     Livraison : Lot 1 - Le 23/05/2023 
 */
 /* Palette des couleurs : #b6ac97 / #392c1e / #906427
 /* Police Montserrat / Lora / Hind madurai
 
+/*================================= Ecran d'accueil : première page ===========================================*/
 /* Page */
 body {
   background-color: #b6ac97;
@@ -30,6 +31,7 @@ body {
                background-color:  #392c1e;
                color: #b6ac97;
                border-bottom: 5px solid #906427;
+               height: 80px;
               } 
        
               .home-quai-antique {
@@ -58,7 +60,7 @@ body {
                  align-items: center;
                  position: absolute;
                  right: 20px;
-                 top: 20px;
+                 top: 37px;
              }
        
              .nav .nav-item {
@@ -75,16 +77,18 @@ body {
               color: #b6ac97;
             }
              
+            .nav .nav-item > a:focus {
+              border: 3px solid #392c1e;
+              border-radius: 20%;
+              padding: 5px;
+              background-color: #906427;
+            }
        /* Contenu-galerie */
 
          .galerie {
-          background-color: #392c1e;
           font-family: Lora;
-          margin-top: 40px;
           padding-top: 20px;
-          margin-bottom: 30px;
           padding-bottom: 20px;
-          width: 100vw;
          }
 
          .list-menu-galerie {
@@ -95,16 +99,10 @@ body {
           justify-content: space-evenly;
         }
 
-
-
-
-         .list-menu-galerie .lien-menu {
-          color: #b6ac97;
-          width: 100%;
-          height: 100px;
-          width: 100px;
+      
+        .galerie > li:hover {
+          border : 10px solid #906427;
         }
-        
 
        /* Contenu-main */
 
@@ -118,18 +116,21 @@ body {
            margin-left: 60px;
            margin-right: 20px;
            margin-bottom: 30px;*/
-           padding: 15px;
+           padding: 50px;
            } 
 
+          section {
+            margin-bottom: 40px;
+          }
 
-       
+
 
                       /* Pied de page */
                       .footer {
                         background-color: #392c1e;
+                        border-top: 4px solid #906427;
                         color: #b6ac97;
-                        
-                        height: 200px;
+                        height: 250px;
                         display: flex;
                         flex-direction: column;
                 
@@ -138,15 +139,10 @@ body {
                         .footer > .restau-footer {
                           font-family: Montserrat;
                           text-align: center;
-                          font-size: 2rem;
-                          margin-top: 30px;
-                          margin-bottom: 30px;
                         }
 
                         .footer > .menu-footer {
-                          
                           margin-top: 30px;
-                          font-weight: bold;
                         }
                 
                         .list-menu-footer {
@@ -160,121 +156,160 @@ body {
                           margin-top: 80px;
                         }
                 
-                        .list-menu-footer .lien-home {
+                        .list-menu-footer li a {
                           text-decoration: none;
                           color: #b6ac97;
                         }
 
-                        .list-menu-footer > li:focus {
+                        .footer .menu-footer .list-menu-footer li a:focus {
                           border: 3px solid #392c1e;
                           border-radius: 20%;
                           padding: 5px;
                           background-color: #906427;
                         }
 
+
+                        .titre-horaires-footer .titre-horaires-footer {
+                          font-size: 1rem;
+                          font-weight: 300;
+                        }
+                
                         .list-social-footer {
                           display: inline-block;
                           list-style: none;
                           position: absolute;
-                          right: 400px;
-                           margin-top: 80px;
+                          left: 100px;
+                          margin-top: 80px;
                         }
-                
+
+                        .list-horaires-footer {
+                          font-family: Hind Madurai;
+                          display: inline-block;
+                          font-size: 0.8rem;
+                          list-style: none;
+                          position: absolute;
+                          right: 200px;
+                          margin-top: 80px;
+                        }
                           .footer > .date-footer {
                           font-family: Hind Madurai;
                           text-align: center;
-                          margin-top: 50px;
                           font-size: 0.8rem;
+                          padding-top: 100px;
                         }
+    
+
+
+                        /*======================== Formulaire client : nouvelle page ============================ */
                         
-
-                        .nav .nav-item > a:focus {
-                          border: 3px solid #392c1e;
-                          border-radius: 20%;
-                          padding: 5px;
-                          background-color: #906427;
+ 
+  
+                        .main-formulaire {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
                         }
 
+      .titre-main {
+        text-align : center;
+      }
+      
+      .h1-formulaire {
+        font-family: Montserrat;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #392c1e;
+      }
 
-                        @media (max-width: 1000px) {
+      .main-formulaire .titre-main > p {
+        font-family: Lora;
+        color: #906427;
+        font-weight: 200;
+      }
+
+      form {
+        max-width: 50%;
+    }
+
+      form label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+  
+      label.inline-label {
+          display: inline-block;
+      }
+  
+      fieldset {
+          border: 1px solid lightgray;
+          background-color: rgba(225, 233, 255, 0.25);
+      }
+  
+      legend {
+          font-style: italic;
+          font-size: 1.1em;
+          padding: 5px;
+      }
+  
+      form input, form select, form textarea {
+          display: inline-block;
+          margin-bottom: 10px;
+          padding: 10px;
+          width: 80%;
+      }
+  
+      form input[type="radio"],
+      form input[type="checkbox"],
+      form input[type="submit"] {
+          width: auto;
+      }
+  
+      button[type=submit], button[type=reset] {
+          padding: 10px;
+          margin-top: 15px;
+      } 
+
+      .send-button {
+        border: 3px solid #392c1e;
+        border-radius: 15%;
+        font-family: Lora;
+        font-weight: 300;
+        padding-bottom: 10px
+      }
+
+      .send-button  .bouton-formulaire {
+        width: 50%;
+      }
+
+
+
+                        /*==================== Media queries : pour formater selon la taille écran utilisateur =================*/
+                        @media (max-width: 800px) {
+                          .nav {   
+                             align-items: flex-end;
+                             position: absolute;
+                             right: 5px;
+                             top: 60px;
+                         }
+
+                            nav .nav-item {
+                              font-size: 1rem;
+                              font-weight: 400;
+                            }  
                           .main {
                             overflow: scroll;
                             display: block;
                             margin-bottom: 10px;
                           }
-                          .galerie {
-                            display: block;
+                          .galerie .list-menu-galerie{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                          }
+
+                          .list-menu-galerie-item{
+                            margin: 20px;
                           }
                         }
- /*         --------------------
-
-               .news-logo {
-                 position: absolute;
-                 top: 900px;
-                 right: 30px;
-                 height: 50px;
-                 width: 50px;
-                 border-radius: 50%;
-                 }
-       
-                 body {
-                  background-color: grey;
-                  }
-            
-            * {
-             margin: 0;
-             padding: 0;
-            }
-                .container {
-                width: 50%;
-                border: 3px solid black;
-                display: flex;
-                } 
-            
-              .left{
-               background-color: blue;
-               width: 50vw;
-               } 
-     
-               .right{
-                 background-color: red;
-                 width: 50%;
-                 height: 100vh;
-                 } 
-     
-                 @media (max-width: 1000px) {
-                   .right{
-                     background-color: green;
-                     flex-grow: 1;
-                   }   
-     
-                   .container{
-                     flex-direction: column;
-                     height: 100vh;
-                   } 
-                     
-                   .left, .right{
-                       width: 100vw;
-                       height: 50vh;
-                   }   
-     
-                   }
-     
-                   @media (max-width: 500px) {
-                     .right{
-                       background-color: purple;
-                         }   
-                     }
-     
-                   @media (min-width: 500px) {
-                     .left{
-                       background-color: purple;
-                         }   
-                     }
-     
-                     @media (min-width: 700px) and (max-width: 1000px) {
-                       h1 {
-                         font-size: 14px;
-                           }   
-                       }
-                       
+                      
