@@ -32,23 +32,53 @@
     <aside class="galerie">
       <ul class="list-menu-galerie">
         <li class="list-menu-galerie-item">
-          <img src="./css/img/plat-gourmet.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
+          <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
         </li>
       </ul>
     </aside>
   <main class="main-formulaire">
-    <div class="titre-main">
+    <section class="haut-formulaire">
+      <div class="titre-main">
       <h1 class="h1-formulaire">Formulaire client</h1>
-      <p>Merci de remplir de remlir ce formulaire pour recevoir notre newsletter des nouveautés</p>
-      <p>Pour vous remercier de cette confiance : un apréitif maison, divin, vous sera offert pour toute première reservation via notre espace client</p>
-    </div>
+      <hr>
+    </section>
+
+    <sectionclass="haut-formulaire">
+        <h2 class="h2-formulaire">Vous êtes déjà enregistré :</h2>
+        <p>
+          Vous pouvez directement vous connecter avec vos identifiants
+        <p>
+        
+          <form method="POST" action="action.php">
+          <div>
+            <label for="email">Email<br>
+              <input type="email" name="email" id="email" placeholder="email@email" checked required>
+              </label>
+          
+            <label for="name">Mot de passe<br>
+              <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
+            </label>
+          </div>
+          <div>
+            <button class="send-button" id="submit" type="submit">Se connecter</button>
+          </div>
+          </form>
+      </section>
+
+      <hr>
+
+      <section>
+      <h2 class="h2-formulaire">Pour vous enregistrer :</h2>
+        <p>Merci de remplir de ce formulaire pour recevoir notre newsletter des nouveautés</p>
+        <p>Pour vous remercier de cette confiance : un apréitif maison, divin, vous sera offert pour toute première reservation via notre espace client</p>
+      
     <form method="POST" action="action.php">
 
       <label for="name">Nom<br>
         <input type="text" name="name" id="name" placeholder="Votre nom" checked required>
       </label>
 
-      <label for="email">email<br>
+      <label for="email">Email<br>
         <input type="email" name="email" id="email" placeholder="email@email" checked required>
         </label>
     
@@ -64,9 +94,6 @@
         <label for="comment">Message<br>
         <textarea rows="4" name="comment" id="comment" placeholder="Saisissez votre commentaire"></textarea>
         </label>
-    
-
-    
     
     <hr>
     <p>Votre civilité :</p>
