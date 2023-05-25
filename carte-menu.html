@@ -39,6 +39,7 @@
 
     <!-- Encart aside : galerie des images de plats du restaurant -->
     <aside class="galerie">
+      <section class="section-galerie">
       <ul class="list-menu-galerie">
         <li class="list-menu-galerie-item">
           <img src="./css/img/plat-cueilleur.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu cueilleur"/>
@@ -50,6 +51,12 @@
           <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
         </li>
       </ul>
+    </section>
+    <section class="section-connexion-galerie">
+      <div class="button-galerie">
+        <button class="send-button-galerie" id="submit" type="submit"><a class="lien-client" href="./formulaire.html" alt="formulaire client">RESERVER</a></button>
+      </div>
+    </section>
     </aside>
 
     <!-- Bloc main : partie pour présenter le restaurant -->
@@ -141,18 +148,16 @@
 
     <!---------------------------------Pied de page ------------------------------->
 
-    !-- Pied de page -->
     <footer class="footer">
-      <p class="restau-footer" id="contact">Quai Antique<br>56 rue des Gourmets<br>00007 Bienvenue-Chez-Nous</p>
-    
-      <p class="menu-footer">
-        <ul class="list-menu-footer">
-          <li><a class="lien-home" href="#home">Home</a></li>
-          <li><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></li>
-          <li><a class="lien-menu" href="./carte-des-plats.html" alt="menu et plat">Menu</a></li>
-          <li><a class="lien-contact" href="#contact">Contact</a></li>
-          <li><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></li>
-        </ul>
+      <p class="restau-footer" id="contact">
+        Quai Antique<br>
+        56 rue des Gourmets<br>
+        00007 Bienvenue-Chez-Nous<br>
+        Tel : 00 11 22 33 44
+      </p>
+    <div>
+    <ul class="menu-footer">
+      <li class="horaires-f">
         <ul class="list-horaires-footer">
           <li class="titre-horaires-footer" >HORAIRE</li>
           <li class="jour-horaires-footer" ><b>Lundi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
@@ -162,15 +167,25 @@
           <li class="jour-horaires-footer" ><b>Vendredi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
           <li class="jour-horaires-footer" ><b><i>Fermé le samedi et le dimanche</i></b></li>
         </ul>
-      </p>
-    
-      <p>
+      </li>
+      <li class="menu-f">
+        <ul class="list-menu-footer">
+          <li><a class="lien-home" href="#home">Home</a></li>
+          <li><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></li>
+          <li><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></li>
+          <li><a class="lien-contact" href="#contact">Contact</a></li>
+          <li><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></li>
+        </ul>
+      </li>
+      <li class="social-f">
         <ul class="list-social-footer">
           <li><img src="./css/img/f-logo.PNG"/></li>
           <li><img src="./css./img/t-logo.PNG"></li>
           <li><img src="./css./img/i-logo.PNG"></li>
         </ul>
-      </p>
+      </li>
+    </ul>
+  </div>
       <p class="date-footer">@2023</p>
     </footer>
     </body>

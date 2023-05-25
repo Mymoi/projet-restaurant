@@ -23,7 +23,7 @@
 
       <nav class="nav" rôle="navigation">
         <div class="nav-item" ><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></div>
-        <div class="nav-item" ><a class="lien-menu" href="./carte-des-plats.html" alt="menu et plat">Menu</a></div>
+        <div class="nav-item" ><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></div>
         <div class="nav-item" ><a class="lien-contact" href="#contact">Contact</a></div>
         <div class="nav-item" ><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></div>
       </nav>
@@ -43,7 +43,7 @@
       <hr>
     </section>
 
-    <sectionclass="haut-formulaire">
+    <section class="deja-client-formulaire">
         <h2 class="h2-formulaire">Vous êtes déjà enregistré :</h2>
         <p>
           Vous pouvez directement vous connecter avec vos identifiants
@@ -65,9 +65,8 @@
           </form>
       </section>
 
-      <hr>
 
-      <section>
+      <section classe="nouveau-client-formulaire">
       <h2 class="h2-formulaire">Pour vous enregistrer :</h2>
         <p>Merci de remplir de ce formulaire pour recevoir notre newsletter des nouveautés</p>
         <p>Pour vous remercier de cette confiance : un apréitif maison, divin, vous sera offert pour toute première reservation via notre espace client</p>
@@ -136,37 +135,47 @@
     </form>
   </main>
 
-<!-- Pied de page -->
-<footer class="footer">
-  <p class="restau-footer" id="contact">Quai Antique<br>56 rue des Gourmets<br>00007 Bienvenue-Chez-Nous</p>
+    <!---------------------------------Pied de page ------------------------------->
 
-  <p class="menu-footer">
-    <ul class="list-menu-footer">
-      <li><a class="lien-home" href="#home">Home</a></li>
-      <li><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></li>
-      <li><a class="lien-menu" href="./carte-des-plats.html" alt="menu et plat">Menu</a></li>
-      <li><a class="lien-contact" href="#contact">Contact</a></li>
-      <li><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></li>
+    <footer class="footer">
+      <p class="restau-footer" id="contact">
+        Quai Antique<br>
+        56 rue des Gourmets<br>
+        00007 Bienvenue-Chez-Nous<br>
+        Tel : 00 11 22 33 44
+      </p>
+    <div>
+    <ul class="menu-footer">
+      <li class="horaires-f">
+        <ul class="list-horaires-footer">
+          <li class="titre-horaires-footer" >HORAIRE</li>
+          <li class="jour-horaires-footer" ><b>Lundi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+          <li class="jour-horaires-footer" ><b>Mardi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+          <li class="jour-horaires-footer" ><b>Mercredi:<i>Fermé le midi</i> - </b>19h30 à 21h00</li>
+          <li class="jour-horaires-footer" ><b>Jeudi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+          <li class="jour-horaires-footer" ><b>Vendredi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
+          <li class="jour-horaires-footer" ><b><i>Fermé le samedi et le dimanche</i></b></li>
+        </ul>
+      </li>
+      <li class="menu-f">
+        <ul class="list-menu-footer">
+          <li><a class="lien-home" href="#home">Home</a></li>
+          <li><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></li>
+          <li><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></li>
+          <li><a class="lien-contact" href="#contact">Contact</a></li>
+          <li><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></li>
+        </ul>
+      </li>
+      <li class="social-f">
+        <ul class="list-social-footer">
+          <li><img src="./css/img/f-logo.PNG"/></li>
+          <li><img src="./css./img/t-logo.PNG"></li>
+          <li><img src="./css./img/i-logo.PNG"></li>
+        </ul>
+      </li>
     </ul>
-    <ul class="list-horaires-footer">
-      <li class="titre-horaires-footer" >HORAIRE</li>
-      <li class="jour-horaires-footer" ><b>Lundi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
-      <li class="jour-horaires-footer" ><b>Mardi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
-      <li class="jour-horaires-footer" ><b>Mercredi:<i>Fermé le midi</i> - </b>19h30 à 21h00</li>
-      <li class="jour-horaires-footer" ><b>Jeudi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
-      <li class="jour-horaires-footer" ><b>Vendredi</b> 12h00 à 13h30 et de 19h30 à 21h00</li>
-      <li class="jour-horaires-footer" ><b>Mercredi:<i>Fermé le samedi et le dimanche</i></b></li>
-    </ul>
-  </p>
-
-  <p>
-    <ul class="list-social-footer">
-      <li><img src="./css/img/f-logo.PNG"/></li>
-      <li><img src="./css./img/t-logo.PNG"></li>
-      <li><img src="./css./img/i-logo.PNG"></li>
-    </ul>
-  </p>
-  <p class="date-footer">@2023</p>
-</footer>
-</body>
-</html>
+  </div>
+      <p class="date-footer">@2023</p>
+    </footer>
+    </body>
+    </html>

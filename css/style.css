@@ -88,7 +88,6 @@ body {
          .galerie {
           font-family: Lora;
           padding-top: 20px;
-          padding-bottom: 20px;
          }
 
          .list-menu-galerie {
@@ -103,6 +102,35 @@ body {
         .galerie > li:hover {
           border : 10px solid #906427;
         }
+
+        .button-galerie {
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+
+        .send-button-galerie  {
+          background-color:#392c1e;
+          border: 2px solid #906427;
+          border-radius: 15%;
+          font-family: Lora;
+          padding-bottom: 10px
+        }
+      
+        .send-button-galerie .lien-client {
+          text-decoration: none;
+          list-style: none;
+          color: white;
+          font-weight: bold;
+        }
+
+        .send-button-galerie:selected {
+          background-color:#b6ac97;
+          color:#906427;
+          font-weight: 500;
+          font-weight: bold;
+        }
+
 
        /* Contenu-main */
 
@@ -130,32 +158,40 @@ body {
                         background-color: #392c1e;
                         border-top: 4px solid #906427;
                         color: #b6ac97;
-                        height: 250px;
-                        display: flex;
-                        flex-direction: column;
-                
-                        }
+                      }
+                        
                 
                         .footer > .restau-footer {
                           font-family: Montserrat;
                           text-align: center;
                         }
 
-                        .footer > .menu-footer {
+
+                        .menu-footer {
+                          text-decoration: none;
+                          list-style: none;
+                          font-family: Hind Madurai;
+                          width: 100%;
+                          display: flex;
+                          justify-content: space-evenly;
                           margin-top: 30px;
                         }
                 
                         .list-menu-footer {
-                          font-family: Hind Madurai;
-                          display: inline-block;
+                          text-decoration: none;
                           list-style: none;
+                          font-family: Hind Madurai;
+                          /*display: inline-block;
                           position: absolute;
-                          left: 400px;
+                          left: 400px;*/
                           font-size: 0.8rem;
                           font-weight: bold;
-                          margin-top: 80px;
                         }
                 
+                        .list-menu-footer li {
+                          margin-bottom: 5px;
+                        }
+
                         .list-menu-footer li a {
                           text-decoration: none;
                           color: #b6ac97;
@@ -168,34 +204,38 @@ body {
                           background-color: #906427;
                         }
 
-
-                        .titre-horaires-footer .titre-horaires-footer {
-                          font-size: 1rem;
-                          font-weight: 300;
-                        }
-                
                         .list-social-footer {
-                          display: inline-block;
+                          text-decoration: none;
                           list-style: none;
+                          font-family: Hind Madurai;
+                          /*display: inline-block;
                           position: absolute;
-                          left: 100px;
-                          margin-top: 80px;
+                          left: 200px;*/
+                        }
+
+                        .list-social-footer li img {
+                          border-radius: 30%;
+                          padding: 3px;
                         }
 
                         .list-horaires-footer {
-                          font-family: Hind Madurai;
-                          display: inline-block;
-                          font-size: 0.8rem;
+                          text-decoration: none;
                           list-style: none;
+                          font-family: Hind Madurai;
+                          font-size: 0.8rem;
+                          font-weight: bold;
+                          /*display: inline-block;
                           position: absolute;
-                          right: 200px;
-                          margin-top: 80px;
+                          right: 100px;*/
                         }
+                        
+                
                           .footer > .date-footer {
                           font-family: Hind Madurai;
+                          width: 100vw;
                           text-align: center;
                           font-size: 0.8rem;
-                          padding-top: 100px;
+                          padding-top: 80px;
                         }
     
 
@@ -203,7 +243,7 @@ body {
                         /*======================== Formulaire client : nouvelle page ============================ */
                         
  
-  
+                        
                         .main-formulaire {
                           display: flex;
                           flex-direction: column;
@@ -277,15 +317,52 @@ body {
         font-weight: 300;
         padding-bottom: 10px
       }
-
+      
       .send-button  .bouton-formulaire {
         width: 50%;
       }
 
+      /*---------------------- Formulaire : déjà client -------------------------*/
+      .deja-client-formulaire {
+        padding-bottom: 15px;
+        border-bottom: 2px solid #906427;
+        width: 100%;
+        justify-items: center ;
+      }
 
+      .nouveau-client-formulaire {
+        padding-bottom: 15px;
+        width: 100%;
+        justify-items: center ;
+        
+      }
 
                         /*==================== Media queries : pour formater selon la taille écran utilisateur =================*/
+                        @media (max-width: 400px) {
+                          .list-social-footer {
+                            border-left:3px solid #906427;
+                            padding-left: 2px;
+                            }
+
+                          .list-menu-footer {
+                            border-left:3px solid #906427;
+                            padding-left: 2px;
+                            }
+                            .list-horaires-footer {
+                             border-left:3px solid #906427;
+                            padding-left: 2px;
+                            }
+                        }
+                        
+                        
                         @media (max-width: 800px) {
+                          .restau-home {
+                            font-size: 1.2rem;
+                            font-family: Montserrat;
+                            font-weight: bold;
+                            margin-left: 5px;
+                          }
+
                           .nav {   
                              align-items: flex-end;
                              position: absolute;
@@ -293,9 +370,9 @@ body {
                              top: 60px;
                          }
 
-                            nav .nav-item {
-                              font-size: 1rem;
-                              font-weight: 400;
+                            .nav .nav-item {
+                              font-size: 0.8rem;
+                              font-weight: 200;
                             }  
                           .main {
                             overflow: scroll;
