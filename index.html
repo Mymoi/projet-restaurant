@@ -6,7 +6,7 @@
      ==> Lot 1 : site internet Front End statique
      ==> Lot 2 : site internet Front End dynamique
      ==> Lot 3: site internet avec les parties Front End  et Back end opérationnelles
-     Livraison : (date + description)
+     Livraisons : V1.0 : 24 mai 2023 - Lot 1 - Partie Front-End statique avec Html et CSS
 -->
 <!DOCTYPE>
 <html lang="fr">
@@ -34,24 +34,35 @@
       <div class="nav-item" ><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></div>
       <div class="nav-item" ><a class="lien-contact" href="#contact">Contact</a></div>
       <div class="nav-item" ><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></div>
+     <!-- <div class="nav-item" ><img src="./css./img/burger-logo.PNG" class="img-burger"></div>-->
     </nav>
-  </header>>
+    
+    <!-- Entête : menu burger pour le responsive design -->
+   <!-- <select name="choix-menu-navigation" id="choix-menu-navigation" class="menu-burger">
+        <option value="rep1"><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></HTML></option>
+        <option value="rep1"><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></HTML></option>
+        <option value="rep2"><a class="lien-contact" href="#contact">Contact</a></option>
+        <option value="rep3"><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></option>
+    </select>-->
+
+  </header>
 
     <!-- Encart aside : galerie des images de plats du restaurant -->
     <aside class="galerie">
       <section class="section-galerie">
-      <ul class="list-menu-galerie">
-        <li class="list-menu-galerie-item">
-          <img src="./css/img/plat-cueilleur.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu cueilleur"/>
-        </li>
-        <li class="list-menu-galerie-item">
-          <img src="./css/img/plat-gargantuesque.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu gargantuesque"/>
-        </li>
-        <li class="list-menu-galerie-item">
-          <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
-        </li>
-      </ul>
-    </section>
+        <ul class="list-menu-galerie">
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-cueilleur.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu cueilleur"/>
+          </li>
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-gargantuesque.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu gargantuesque"/>
+          </li>
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
+          </li>
+        </ul>
+      </section>
+    
     <section class="section-connexion-galerie">
       <div class="button-galerie">
         <button class="send-button-galerie" id="submit" type="submit"><a class="lien-client" href="./formulaire.html" alt="formulaire client">RESERVER</a></button>
@@ -136,5 +147,6 @@
   </div>
       <p class="date-footer">@2023</p>
     </footer>
+    <script src="script.js"></script>
     </body>
     </html>

@@ -2,7 +2,11 @@
      Réalisation par : Voahiranirina Myriam RAJERIARISOA
      Date : Mai 2023
      Projet : création du site internet du restaurant Quai Antique 
-     Page formulaire
+     Phases du projet : 3 découpage en 3 lots. Chaque lot livré  pour tout utilisateur.
+     ==> Lot 1 : site internet Front End statique
+     ==> Lot 2 : site internet Front End dynamique
+     ==> Lot 3: site internet avec les parties Front End  et Back end opérationnelles
+     Livraisons : V1.0 : 24 mai 2023 - Lot 1 - Partie Front-End statique avec Html et CSS
 -->
 <!DOCTYPE>
 <html lang="fr">
@@ -10,128 +14,141 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./css/style.css">
-    <title>formulaire</title>
+    <title>Restaurant-Quai-Antique</title>
   </head>
+
+  <!-- Corps de la page -->
   <body>
+
+  <!-- Entête : le logo du restaurant -->
     <header>
       <div class="home-quai-antique">
         <img 
         src="./css/img/restau-logo.png" alt="restaurant quai antique logo" class="logo-restau-home" 
         />
-        <span class="restau-home"  id="home">Bienvenue</span>
+        <span class="restau-home"  id="home">Bienvenue au Quai Antique</span>
       </div>
+<!-- Entête : la barre de navigation -->
+    <nav class="nav" rôle="navigation">
+      <div class="nav-item" ><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></div>
+      <div class="nav-item" ><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></div>
+      <div class="nav-item" ><a class="lien-contact" href="#contact">Contact</a></div>
+      <div class="nav-item" ><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></div>
+    </nav>
+  </header>
 
-      <nav class="nav" rôle="navigation">
-        <div class="nav-item" ><a class="lien-accueil" href="./index.html" alt="page accueil">Accueil</a></div>
-        <div class="nav-item" ><a class="lien-menu" href="./carte-menu.html" alt="menu et plat">Menu</a></div>
-        <div class="nav-item" ><a class="lien-contact" href="#contact">Contact</a></div>
-        <div class="nav-item" ><a class="lien-client" href="./formulaire.html" alt="formulaire client">Client</a></div>
-      </nav>
-    </header>
-
+    <!-- Encart aside : galerie des images de plats du restaurant -->
     <aside class="galerie">
-      <ul class="list-menu-galerie">
-        <li class="list-menu-galerie-item">
-          <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
-        </li>
-      </ul>
+      <section class="section-galerie">
+        <ul class="list-menu-galerie">
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-cueilleur.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu cueilleur"/>
+          </li>
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-gargantuesque.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu gargantuesque"/>
+          </li>
+          <li class="list-menu-galerie-item">
+            <img src="./css/img/plat-moderne.png" alt="restaurant quai antique plat" class="galerie-plat" title="plat du menu moderne"/>
+          </li>
+        </ul>
+      </section>
     </aside>
-  <main class="main-formulaire">
-    <section class="haut-formulaire">
-      <div class="titre-main">
-      <h1 class="h1-formulaire">Formulaire client</h1>
-      <hr>
+
+    <!-- Partie main : formulaire -->
+  <main class="main-form">
+    <section class="head-customer-form">
+      <h1 class="h1-form">Formulaire client</h1>
     </section>
 
-    <section class="deja-client-formulaire">
-        <h2 class="h2-formulaire">Vous êtes déjà enregistré :</h2>
-        <p>
-          Vous pouvez directement vous connecter avec vos identifiants
-        <p>
+    <section class="customer-form">
+      <h2 class="h2-form">Vous êtes déjà enregistré :</h2>
+      <p>Vous pouvez directement vous connecter avec vos identifiants</p>
         
-          <form method="POST" action="action.php">
-          <div>
-            <label for="email">Email<br>
-              <input type="email" name="email" id="email" placeholder="email@email" checked required>
-              </label>
+      <form method="POST" action="action.php" id="connexion-custom-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="email@email" checked required>
+        </div>
+      
+        <div class="input-group">
+          <label for="name">Mot de passe</label>
+          <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
+        </div>
+
+        <div class="input-action">
+          <!-- <button class="send-button" id="bt-sign-in" type="submit">Se connecter</button> -->
+          <input type="submit" value="Se connecter"  class="button-form" id="bt-sign-up">
+        </div>
+      </form>
+    </section>
+      
+      
+    <section class="new-customer-form">
+      <h2 class="h2-form">Pour vous enregistrer :</h2>
+      <p>Merci de remplir de ce formulaire pour recevoir notre newsletter des nouveautés</p>
+       
+      <form method="POST" action="action.php" id="register-custom-form">
+        <div class="input-group">
+          <label for="name">Nom</label>
+          <input type="text" name="name" id="name" placeholder="Votre nom" checked required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="email@email" checked required>
+        </div>
+      
+        <div class="input-group">
+          <label for="name">Mot de passe</label>
+          <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
+        </div>
+        
+        <div class="input-group">
+          <label for="birthDate">Date de naissance<br></label>
+          <input type="date" name="birthDate" id="birthDate" placeholder="Votre date de naissance" checked required>
+        </div>
+
+        <div class="input-group">
+          <label for="comment">Message<br></label>
+          <textarea rows="4" name="comment" id="comment" placeholder="Saisissez votre commentaire"></textarea>
+        </div>
+      
+        <p>Votre civilité :</p>
+        <div class="input-group">
+          <input type="radio" id="female" name="butt-radio-female" checked>
+          <label for="opt-female">Mme.</label>
           
-            <label for="name">Mot de passe<br>
-              <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
-            </label>
-          </div>
-          <div>
-            <button class="send-button" id="submit" type="submit">Se connecter</button>
-          </div>
-          </form>
+          <input type="radio" id="male" name="butt-radio-male">
+          <label for="opt-male">M.</label>
+        </div>
+
+        <div class="input-group">
+          <label for="reponse-selector">
+            Pour mieux vous connaître : Selectionnez votre menu préféré
+          </label>
+          <select name="category" id="category">
+            <option value="hunter-gather">Cueilleur</option>
+            <option value="gargantuan">Gargantuesque</option>
+            <option value="modern">Moderne</option>
+          </select>
+        </div>
+      <hr>
+      <p>Cochez la case pour valider le formulaire :</p>
+      <div class="input-group">
+      <label for="cgv">
+        <input type="checkbox" id="cgv" name="cgv">
+        J'accepte les conditions générales
+      </label>
+      </div>
+      
+      <div class="input-action">
+        <!-- <button class="send-button" id="submit" type="submit">Créer votre compte client</button> -->
+        <input type="submit" value="Créer votre compte client"  class="button-form" id="bt-sign-up">
+
+        <!-- <button class="send-button" id="submit" type="submit">Vider le formulaire</button> -->
+        <input type="reset" value="Tout effacer" class="button-form" id="bt-reset">
+      </div>
       </section>
-
-
-      <section classe="nouveau-client-formulaire">
-      <h2 class="h2-formulaire">Pour vous enregistrer :</h2>
-        <p>Merci de remplir de ce formulaire pour recevoir notre newsletter des nouveautés</p>
-        <p>Pour vous remercier de cette confiance : un apréitif maison, divin, vous sera offert pour toute première reservation via notre espace client</p>
-      
-    <form method="POST" action="action.php">
-
-      <label for="name">Nom<br>
-        <input type="text" name="name" id="name" placeholder="Votre nom" checked required>
-      </label>
-
-      <label for="email">Email<br>
-        <input type="email" name="email" id="email" placeholder="email@email" checked required>
-        </label>
-    
-      <label for="name">Mot de passe<br>
-        <input type="password" name="password" id="password" placeholder="Mot de passe" checked required>
-      </label>
-      
-    
-      <label for="birthDate">Date de naissance<br>
-        <input type="date" name="birthDate" id="birthDate" placeholder="Votre date de naissance" checked required>
-      </label>
-    
-        <label for="comment">Message<br>
-        <textarea rows="4" name="comment" id="comment" placeholder="Saisissez votre commentaire"></textarea>
-        </label>
-    
-    <hr>
-    <p>Votre civilité :</p>
-    <div>
-      <label for="opt1">
-        <input type="radio" id="opt1" name="option-radio" value="opt1" checked>
-        Mme</label>
-    </div>
-    <div>
-      <label for="opt2">
-        <input type="radio" id="opt2" name="option-radio" value="opt2">
-        Mr
-      </label>
-    </div>
-    <hr>
-    <label for="reponse-selector">Pour mieux vous connaître : Selectionnez votre menu préféré
-      <select name="reponse-selector" id="reponse-selector">
-        <option value="rep1">Cueilleur</HTML></option>
-        <option value="rep2">Gargantuesque</option>
-        <option value="rep3">Moderne</option>
-    </select>
-    </label>
-    <hr>
-    <p>Cochez la case pour valider le formulaire :</p>
-    <div>
-    <label for="rep1">
-      <input type="checkbox" id="rep1" name="rep1" required>
-      J'accepte les conditions générales
-    </label>
-    </div>
-    
-    <div>
-      <!-- <button class="send-button" id="submit" type="submit">Créer votre compte client</button> -->
-      <input type="reset" value="Créer votre compte client"  class="bouton-formulaire" required>
-    </div>
-    <div>
-      <!-- <button class="send-button" id="submit" type="submit">Vider le formulaire</button> -->
-      <input type="reset" value="Tout effacer" class="bouton-formulaire">
-    </div>
     </form>
   </main>
 
@@ -177,5 +194,6 @@
   </div>
       <p class="date-footer">@2023</p>
     </footer>
+    <script src="script.js"></script>
     </body>
     </html>

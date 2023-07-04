@@ -6,7 +6,7 @@
      ==> Lot 1 : site internet Front End statique
      ==> Lot 2 : site internet Front End dynamique
      ==> Lot 3: site internet avec les parties Front End  et Back end opérationnelles
-     Livraison : Lot 1 - Le 23/05/2023 
+     Livraisons : V1.0 : 24 mai 2023 - Lot 1 - Partie Front-End statique avec Html et CSS
 */
 /* Palette des couleurs : #b6ac97 / #392c1e / #906427
 /* Police Montserrat / Lora / Hind madurai
@@ -15,7 +15,6 @@
 /* Page */
 body {
   background-color: #b6ac97;
-
   }
 
   * {
@@ -60,7 +59,7 @@ body {
                  align-items: center;
                  position: absolute;
                  right: 20px;
-                 top: 37px;
+                 top: 36px;
              }
        
              .nav .nav-item {
@@ -75,7 +74,7 @@ body {
              .nav .nav-item > a {
               text-decoration: none;
               color: #b6ac97;
-            }
+            } 
              
             .nav .nav-item > a:focus {
               border: 3px solid #392c1e;
@@ -83,6 +82,16 @@ body {
               padding: 5px;
               background-color: #906427;
             }
+
+            .nav .nav-item .img-burger {
+              height: 15px;
+              width: 15px;
+              border: 2px solid #b6ac97;
+              border-radius: 20%;
+              position: absolute;
+              right: 5000px;
+            }
+
        /* Contenu-galerie */
 
          .galerie {
@@ -90,7 +99,7 @@ body {
           padding-top: 20px;
          }
 
-         .list-menu-galerie {
+         .galerie .section-galerie .list-menu-galerie {
           text-decoration: none;
           list-style: none;
           display: flex;
@@ -102,11 +111,13 @@ body {
         .galerie > li:hover {
           border : 10px solid #906427;
         }
+        
 
         .button-galerie {
           display: flex;
           justify-content: center;
           width: 100vw;
+          padding-bottom: 10px;
         }
 
         .send-button-galerie  {
@@ -213,9 +224,10 @@ body {
                           left: 200px;*/
                         }
 
-                        .list-social-footer li img {
-                          border-radius: 30%;
-                          padding: 3px;
+                        .social-f > .list-social-footer > li > img {
+                          width: 25px;
+                          height: 25px;
+                          padding: 5px;
                         }
 
                         .list-horaires-footer {
@@ -244,27 +256,37 @@ body {
                         
  
                         
-                        .main-formulaire {
+                       /* .main-formulaire {
                           display: flex;
                           flex-direction: column;
-                          align-items: center;
-                        }
+                          justify-content: center;
+                        }*/
 
-      .titre-main {
+      .h1-form {
         text-align : center;
       }
       
       .h1-formulaire {
         font-family: Montserrat;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 500;
-        color: #392c1e;
+        font-style: italic;
+        color:#906427
       }
 
-      .main-formulaire .titre-main > p {
-        font-family: Lora;
-        color: #906427;
-        font-weight: 200;
+
+      /*---------------------- Formulaire : déjà client -------------------------*/
+      .main-formulaire .deja-client-formulaire {
+        border-top: 2px solid #906427;
+        padding-bottom: 20px;
+        /*width: 100%;
+        /*justify-items: center ;*/
+      }
+
+ 
+
+      .h2-formulaire {
+        padding-bottom: 10px;
       }
 
       form {
@@ -311,34 +333,22 @@ body {
       } 
 
       .send-button {
-        border: 3px solid #392c1e;
+        background-color: #906427;
+        color: white;
         border-radius: 15%;
         font-family: Lora;
-        font-weight: 300;
-        padding-bottom: 10px
+        font-size: 15px;
+        padding-bottom: 10px;
       }
       
-      .send-button  .bouton-formulaire {
-        width: 50%;
-      }
 
-      /*---------------------- Formulaire : déjà client -------------------------*/
-      .deja-client-formulaire {
-        padding-bottom: 15px;
-        border-bottom: 2px solid #906427;
-        width: 100%;
-        justify-items: center ;
-      }
 
-      .nouveau-client-formulaire {
-        padding-bottom: 15px;
-        width: 100%;
-        justify-items: center ;
-        
-      }
+
 
                         /*==================== Media queries : pour formater selon la taille écran utilisateur =================*/
-                        @media (max-width: 400px) {
+                       
+                       @media (max-width: 450) {
+
                           .list-social-footer {
                             border-left:3px solid #906427;
                             padding-left: 2px;
@@ -352,33 +362,44 @@ body {
                              border-left:3px solid #906427;
                             padding-left: 2px;
                             }
+                            .restau-home {
+                              font-size: 1rem;
+                              font-family: Montserrat;
+                              font-weight: bold;
+                              margin-left: 2px;
+                            }
+                            .nav {   
+                               align-items: flex-end;
+                               position: absolute;
+                               right: 2px;
+                               top: 100px;
+                           }
+                              .nav .nav-item {
+                                font-size: 0.5rem;
+                                font-weight: 200;
+                              }  
+                              nav .nav-item .img-burger {
+                                width: 20%;
+                                height: 20%;
+                                position: absolute;
+                                right: 30px;
+                                } 
+
                         }
                         
+
+                        @media (max-width: 420px) {
+                          
                         
-                        @media (max-width: 800px) {
+                        @media (max-width: 850px) {
                           .restau-home {
                             font-size: 1.2rem;
-                            font-family: Montserrat;
-                            font-weight: bold;
-                            margin-left: 5px;
                           }
-
-                          .nav {   
-                             align-items: flex-end;
-                             position: absolute;
-                             right: 5px;
-                             top: 60px;
-                         }
 
                             .nav .nav-item {
                               font-size: 0.8rem;
-                              font-weight: 200;
                             }  
-                          .main {
-                            overflow: scroll;
-                            display: block;
-                            margin-bottom: 10px;
-                          }
+
                           .galerie .list-menu-galerie{
                             display: flex;
                             flex-direction: column;
