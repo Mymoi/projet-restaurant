@@ -8,10 +8,25 @@
 // ==> Lot 3: site internet avec les parties Front End  et Back end opérationnelles
 // Livraisons : V1.0 : 24 mai 2023 - Lot 1 - Partie Front-End statique avec Html et CSS
 
+//Prise en compte des données de connexion de l'utilisateur déjà inscrit
+const el1 = document.getElementById('connexion-custom-form')
+el1.addEventListener('submit', (event) =>{
+  event.preventDefault()
 
-//Prise en compte des informations du formulaire nouveau client
-const el = document.getElementById('register-custom-form')
-el.addEventListener('submit', (event) =>{
+  let email = event.target.email.value
+  let pwd = event.target.password.value
+
+  if (email && pwd) {
+    alert(`Bonjour, vous allez être redirigé votre page client.`)
+    }
+    else {
+    alert(`Suite à un problème technique votre page client est indisponible.`)
+    }
+ })
+
+ //Prise en compte des informations du formulaire nouveau client
+const el2 = document.getElementById('register-custom-form')
+el2.addEventListener('submit', (event) =>{
   event.preventDefault()
 
   let civility = event.target.female.checked ? 'female' : 'male'
@@ -44,10 +59,10 @@ el.addEventListener('submit', (event) =>{
 
 
   if (cgv) {
-    alert(`Merci pour votre enregistrement ${myCivility} ${myName}, \n vous recevrez prochainement notre newsletter et les nouveautés de votre catégorie préférée, ${myCategory} `)
+    alert(`Merci pour votre enregistrement ${myCivility} ${myName}, \n vous recevrez prochainement notre newsletter et les nouveautés de votre catégorie préférée, ${myCategory}. `)
     }
     else {
-    alert(`Merci de cocher la case des conditions générales ${myCivility} ${myName}, pour valider votre enregistrement`)
+    alert(`Merci de cocher la case des conditions générales ${myCivility} ${myName}, pour valider votre enregistrement.`)
     }
  })
 
